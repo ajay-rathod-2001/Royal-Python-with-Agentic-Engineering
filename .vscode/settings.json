@@ -1,0 +1,5 @@
+{
+    "editor.overviewRulerBorder": true,
+    "notebook.outline.showCodeCells": false,
+    "notebook.undoRedoPerCell": true
+}
