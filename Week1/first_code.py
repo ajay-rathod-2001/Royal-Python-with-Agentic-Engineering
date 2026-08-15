@@ -1,1 +1,0 @@
-print("Hello, Royal Python with AI Engineering")
