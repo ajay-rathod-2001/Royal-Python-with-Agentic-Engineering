@@ -13,18 +13,26 @@ class Tool(ABC):
     def run(self, *args):
         ...
 
-
+print("=============================================================================================")
 
 class CalculatorTool(Tool):
 
     def __init__(self):
-        super().__init__("Calculator", "A tool for adding and multiplying numbers....!")
-    
+        super().__init__("🔀 Calculator : ", "A tool for Calculating Agentic Master numbers....!")
+
     def add(self, a, b):
         return a + b
 
     def multiplication(self, a, b):
         return a * b
+
+    def sub(self, a, b):
+        return a - b
+
+    def div(self, a, b):
+        return a / b
+    def moduls(self, a, b):
+        return a % b
 
     def run(self, *args):
         a, b, name = args   ## 1,3,  "data"
@@ -33,18 +41,26 @@ class CalculatorTool(Tool):
             return self.add(a,b)
         elif name == "mul":
             return self.multiplication(a, b)
+        elif name == "sub":
+            return self.sub(a, b)
+        elif name == "div":
+            return self.div(a, b)
+        elif name == "moduls":
+            return self.moduls(a, b)
         else:
             raise ValueError(f"invalid Operation : {name}") 
+
 
 class GreeterTool(Tool):
 
     def __init__(self):
-        super().__init__("Greeter", "A tool for greeting people....!")
+        super().__init__("🌈💝Greeter : ", "A tool for greeting people....!")
 
     def run(self, *args):
         name = args[0]
         return f"Hello, {name}!"
 
+print("=============================================================================================")
 
 class Agent:
     def __init__(self, name):
@@ -75,12 +91,20 @@ agent.list_tool()
 
 add_result = agent.use_tool("Calculator", 5, 7, "add")
 mul_result = agent.use_tool("Calculator", 5, 7, "mul")
+sub_result = agent.use_tool("Calculator", 7, 5, "sub")
+div_result = agent.use_tool("Calculator", 49, 7, "div")
+moduls_result = agent.use_tool("Calculator", 5, 2, "moduls")
 
 greet_result = agent.use_tool("Greeter", "Agentic Master")
+
+print("=============================================================================================")
 
 
 print("Adding Result: ", add_result)
 print("Multiplication Result: ", mul_result)
+print("Substraction Result: ", sub_result)
+print("Division Result: ", div_result)
+print("Moduls Result: ", moduls_result)
 print("Greeting Result: ", greet_result)
 
 
