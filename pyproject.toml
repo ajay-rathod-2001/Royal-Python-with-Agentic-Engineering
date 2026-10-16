@@ -9,4 +9,5 @@ dependencies = []
 [tool.uv.workspace]
 members = [
     "Project/mt_third_project",
+    "my_project_str",
 ]

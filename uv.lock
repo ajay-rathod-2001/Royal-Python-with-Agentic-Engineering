@@ -5,6 +5,7 @@ requires-python = ">=3.14"
 [manifest]
 members = [
     "mt-third-project",
+    "my-project-str",
     "royal-python-with-ai-engineer",
 ]
 
@@ -12,6 +13,11 @@ members = [
 name = "mt-third-project"
 version = "0.1.0"
 source = { virtual = "Project/mt_third_project" }
+
+[[package]]
+name = "my-project-str"
+version = "0.1.0"
+source = { virtual = "my_project_str" }
 
 [[package]]
 name = "royal-python-with-ai-engineer"
